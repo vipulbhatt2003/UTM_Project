@@ -1,0 +1,681 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transformation>
+  <info>
+    <name>load_ipaddress_subnet</name>
+    <description/>
+    <extended_description/>
+    <trans_version/>
+    <trans_type>Normal</trans_type>
+    <directory>&#47;</directory>
+    <parameters>
+    </parameters>
+    <log>
+<trans-log-table><connection/>
+<schema/>
+<table/>
+<size_limit_lines/>
+<interval/>
+<timeout_days/>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>TRANSNAME</id><enabled>Y</enabled><name>TRANSNAME</name></field><field><id>STATUS</id><enabled>Y</enabled><name>STATUS</name></field><field><id>LINES_READ</id><enabled>Y</enabled><name>LINES_READ</name><subject/></field><field><id>LINES_WRITTEN</id><enabled>Y</enabled><name>LINES_WRITTEN</name><subject/></field><field><id>LINES_UPDATED</id><enabled>Y</enabled><name>LINES_UPDATED</name><subject/></field><field><id>LINES_INPUT</id><enabled>Y</enabled><name>LINES_INPUT</name><subject/></field><field><id>LINES_OUTPUT</id><enabled>Y</enabled><name>LINES_OUTPUT</name><subject/></field><field><id>LINES_REJECTED</id><enabled>Y</enabled><name>LINES_REJECTED</name><subject/></field><field><id>ERRORS</id><enabled>Y</enabled><name>ERRORS</name></field><field><id>STARTDATE</id><enabled>Y</enabled><name>STARTDATE</name></field><field><id>ENDDATE</id><enabled>Y</enabled><name>ENDDATE</name></field><field><id>LOGDATE</id><enabled>Y</enabled><name>LOGDATE</name></field><field><id>DEPDATE</id><enabled>Y</enabled><name>DEPDATE</name></field><field><id>REPLAYDATE</id><enabled>Y</enabled><name>REPLAYDATE</name></field><field><id>LOG_FIELD</id><enabled>Y</enabled><name>LOG_FIELD</name></field></trans-log-table>
+<perf-log-table><connection/>
+<schema/>
+<table/>
+<interval/>
+<timeout_days/>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>SEQ_NR</id><enabled>Y</enabled><name>SEQ_NR</name></field><field><id>LOGDATE</id><enabled>Y</enabled><name>LOGDATE</name></field><field><id>TRANSNAME</id><enabled>Y</enabled><name>TRANSNAME</name></field><field><id>STEPNAME</id><enabled>Y</enabled><name>STEPNAME</name></field><field><id>STEP_COPY</id><enabled>Y</enabled><name>STEP_COPY</name></field><field><id>LINES_READ</id><enabled>Y</enabled><name>LINES_READ</name></field><field><id>LINES_WRITTEN</id><enabled>Y</enabled><name>LINES_WRITTEN</name></field><field><id>LINES_UPDATED</id><enabled>Y</enabled><name>LINES_UPDATED</name></field><field><id>LINES_INPUT</id><enabled>Y</enabled><name>LINES_INPUT</name></field><field><id>LINES_OUTPUT</id><enabled>Y</enabled><name>LINES_OUTPUT</name></field><field><id>LINES_REJECTED</id><enabled>Y</enabled><name>LINES_REJECTED</name></field><field><id>ERRORS</id><enabled>Y</enabled><name>ERRORS</name></field><field><id>INPUT_BUFFER_ROWS</id><enabled>Y</enabled><name>INPUT_BUFFER_ROWS</name></field><field><id>OUTPUT_BUFFER_ROWS</id><enabled>Y</enabled><name>OUTPUT_BUFFER_ROWS</name></field></perf-log-table>
+<channel-log-table><connection/>
+<schema/>
+<table/>
+<timeout_days/>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>LOG_DATE</id><enabled>Y</enabled><name>LOG_DATE</name></field><field><id>LOGGING_OBJECT_TYPE</id><enabled>Y</enabled><name>LOGGING_OBJECT_TYPE</name></field><field><id>OBJECT_NAME</id><enabled>Y</enabled><name>OBJECT_NAME</name></field><field><id>OBJECT_COPY</id><enabled>Y</enabled><name>OBJECT_COPY</name></field><field><id>REPOSITORY_DIRECTORY</id><enabled>Y</enabled><name>REPOSITORY_DIRECTORY</name></field><field><id>FILENAME</id><enabled>Y</enabled><name>FILENAME</name></field><field><id>OBJECT_ID</id><enabled>Y</enabled><name>OBJECT_ID</name></field><field><id>OBJECT_REVISION</id><enabled>Y</enabled><name>OBJECT_REVISION</name></field><field><id>PARENT_CHANNEL_ID</id><enabled>Y</enabled><name>PARENT_CHANNEL_ID</name></field><field><id>ROOT_CHANNEL_ID</id><enabled>Y</enabled><name>ROOT_CHANNEL_ID</name></field></channel-log-table>
+<step-log-table><connection/>
+<schema/>
+<table/>
+<timeout_days/>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>LOG_DATE</id><enabled>Y</enabled><name>LOG_DATE</name></field><field><id>TRANSNAME</id><enabled>Y</enabled><name>TRANSNAME</name></field><field><id>STEPNAME</id><enabled>Y</enabled><name>STEPNAME</name></field><field><id>STEP_COPY</id><enabled>Y</enabled><name>STEP_COPY</name></field><field><id>LINES_READ</id><enabled>Y</enabled><name>LINES_READ</name></field><field><id>LINES_WRITTEN</id><enabled>Y</enabled><name>LINES_WRITTEN</name></field><field><id>LINES_UPDATED</id><enabled>Y</enabled><name>LINES_UPDATED</name></field><field><id>LINES_INPUT</id><enabled>Y</enabled><name>LINES_INPUT</name></field><field><id>LINES_OUTPUT</id><enabled>Y</enabled><name>LINES_OUTPUT</name></field><field><id>LINES_REJECTED</id><enabled>Y</enabled><name>LINES_REJECTED</name></field><field><id>ERRORS</id><enabled>Y</enabled><name>ERRORS</name></field><field><id>LOG_FIELD</id><enabled>N</enabled><name>LOG_FIELD</name></field></step-log-table>
+    </log>
+    <maxdate>
+      <connection/>
+      <table/>
+      <field/>
+      <offset>0.0</offset>
+      <maxdiff>0.0</maxdiff>
+    </maxdate>
+    <size_rowset>10000</size_rowset>
+    <sleep_time_empty>50</sleep_time_empty>
+    <sleep_time_full>50</sleep_time_full>
+    <unique_connections>N</unique_connections>
+    <feedback_shown>Y</feedback_shown>
+    <feedback_size>50000</feedback_size>
+    <using_thread_priorities>Y</using_thread_priorities>
+    <shared_objects_file/>
+    <capture_step_performance>N</capture_step_performance>
+    <step_performance_capturing_delay>1000</step_performance_capturing_delay>
+    <step_performance_capturing_size_limit>100</step_performance_capturing_size_limit>
+    <dependencies>
+    </dependencies>
+    <partitionschemas>
+    </partitionschemas>
+    <slaveservers>
+    </slaveservers>
+    <clusterschemas>
+    </clusterschemas>
+  <created_user>-</created_user>
+  <created_date>2017&#47;02&#47;19 11:26:35.779</created_date>
+  <modified_user>-</modified_user>
+  <modified_date>2017&#47;02&#47;19 11:26:35.779</modified_date>
+  </info>
+  <notepads>
+  </notepads>
+  <connection>
+    <name>H2</name>
+    <server/>
+    <type>H2</type>
+    <access>Native</access>
+    <database>${MemDBName}</database>
+    <port>-1</port>
+    <username/>
+    <password>Encrypted </password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>-1</attribute></attribute>
+      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
+      <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>N</attribute></attribute>
+      <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
+    </attributes>
+  </connection>
+  <order>
+  <hop> <from>ChangeIpAddress</from><to>SelectIpAddress</to><enabled>Y</enabled> </hop>  <hop> <from>ChangeIpsubnet</from><to>SelecIpsubnet</to><enabled>Y</enabled> </hop>  <hop> <from>IpAddress</from><to>ChangeIpAddress</to><enabled>Y</enabled> </hop>  <hop> <from>Ipsubnet</from><to>ChangeIpsubnet</to><enabled>Y</enabled> </hop>  <hop> <from>SelecIpsubnet</from><to>Memory table output(Ipsubnet)</to><enabled>Y</enabled> </hop>  <hop> <from>SelectIpAddress</from><to>Memory table output(IpAddress)</to><enabled>Y</enabled> </hop>  </order>
+  <step>
+    <name>ChangeIpAddress</name>
+    <type>ScriptValueMod</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <compatible>Y</compatible>
+    <optimizationLevel>9</optimizationLevel>
+    <jsScripts>      <jsScript>        <jsScript_type>0</jsScript_type>
+        <jsScript_name>Script 1</jsScript_name>
+        <jsScript_script>&#47;&#47;Script here
+
+var tdl_ds_dn=&apos;nnmi_ipaddress_&apos;+Id.getString();
+var tdl_dn=&apos;nnmi_ipaddress_&apos;+Id.getString();
+var tdl_instance_name=&apos;nnmi_ipaddress_&apos; + Id.getString();</jsScript_script>
+      </jsScript>    </jsScripts>    <fields>      <field>        <name>tdl_ds_dn</name>
+        <rename>tdl_ds_dn</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>      <field>        <name>tdl_dn</name>
+        <rename>tdl_dn</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>      <field>        <name>tdl_instance_name</name>
+        <rename>tdl_instance_name</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>    </fields>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>363</xloc>
+      <yloc>238</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>ChangeIpsubnet</name>
+    <type>ScriptValueMod</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <compatible>Y</compatible>
+    <optimizationLevel>9</optimizationLevel>
+    <jsScripts>      <jsScript>        <jsScript_type>0</jsScript_type>
+        <jsScript_name>Script 1</jsScript_name>
+        <jsScript_script>&#47;&#47;Script here
+
+var tdl_ds_dn=&apos;nnmi_ipsubnet_&apos;+Id.getString();
+var tdl_dn=&apos;nnmi_ipsubnet_&apos;+Id.getString();
+var tdl_instance_name = &apos;nnmi_ipsubnet_&apos; + Id.getString();</jsScript_script>
+      </jsScript>    </jsScripts>    <fields>      <field>        <name>tdl_ds_dn</name>
+        <rename>tdl_ds_dn</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>      <field>        <name>tdl_dn</name>
+        <rename>tdl_dn</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>      <field>        <name>tdl_instance_name</name>
+        <rename>tdl_instance_name</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>    </fields>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>362</xloc>
+      <yloc>333</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>IpAddress</name>
+    <type>CSVInputExt</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <filename>&#47;var&#47;opt&#47;UTM&#47;V2.0&#47;data&#47;NNMi_Collector&#47;nnm_data&#47;^IpAddress.*\.csv</filename>
+    <filename_field/>
+    <rownum_field/>
+    <include_filename>N</include_filename>
+    <separator>|</separator>
+    <enclosure/>
+    <header>Y</header>
+    <buffer_size>50000</buffer_size>
+    <lazy_conversion>N</lazy_conversion>
+    <add_filename_result>N</add_filename_result>
+    <parallel>N</parallel>
+    <newline_possible>Y</newline_possible>
+    <encoding>UTF-8</encoding>
+    <fields>
+      <field>
+        <name>Id</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>Uuid</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>HostedOnId</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>IpSubnetId</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>InInterfaceId</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>PrefixLength</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>ManagementMode</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>Notes</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>Created</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>Modified</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+    </fields>
+    <startQuote>{</startQuote>
+    <endQuote>}</endQuote>
+    <Remark/>
+    <outFileName/>
+    <checkColumnCounts/>
+
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>233</xloc>
+      <yloc>239</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Ipsubnet</name>
+    <type>CSVInputExt</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <filename>&#47;var&#47;opt&#47;UTM&#47;V2.0&#47;data&#47;NNMi_Collector&#47;nnm_data&#47;^IpSubnet.*\.csv</filename>
+    <filename_field/>
+    <rownum_field/>
+    <include_filename>N</include_filename>
+    <separator>|</separator>
+    <enclosure/>
+    <header>Y</header>
+    <buffer_size>50000</buffer_size>
+    <lazy_conversion>N</lazy_conversion>
+    <add_filename_result>N</add_filename_result>
+    <parallel>N</parallel>
+    <newline_possible>Y</newline_possible>
+    <encoding>UTF-8</encoding>
+    <fields>
+      <field>
+        <name>Id</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>Uuid</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>Name</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>PrefixLength</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>Prefix</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>Notes</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>Created</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>Modified</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+    </fields>
+    <startQuote>{</startQuote>
+    <endQuote>}</endQuote>
+    <Remark/>
+    <outFileName/>
+    <checkColumnCounts/>
+
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>237</xloc>
+      <yloc>336</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Memory table output(IpAddress)</name>
+    <type>MemTableOutput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>H2</connection>
+    <schema/>
+    <table>TM_UTM_NNM_MODEL_IPADDRESS</table>
+    <commit>100</commit>
+    <truncate>N</truncate>
+    <ignore_errors>N</ignore_errors>
+    <use_batch>Y</use_batch>
+    <specify_fields>N</specify_fields>
+    <partitioning_enabled>N</partitioning_enabled>
+    <partitioning_field/>
+    <partitioning_daily>N</partitioning_daily>
+    <partitioning_monthly>Y</partitioning_monthly>
+    <tablename_in_field>N</tablename_in_field>
+    <tablename_field/>
+    <tablename_in_table>Y</tablename_in_table>
+    <return_keys>N</return_keys>
+    <return_field/>
+    <fields>
+    </fields>
+    <ddlSql>CREATE TABLE TM_UTM_NNM_MODEL_IPADDRESS COMMENT &apos;UTM_NNM_MODEL.IPADDRESS.E:UTM_NNM_MODEL:NNM_IPAddress&apos; (_H2_ID long PRIMARY KEY AUTO_INCREMENT,_Parent_DSDN  TEXT COMMENT &apos;_Parent_DSDN&apos;,Uuid VARCHAR(255)   COMMENT &apos;Uuid&apos;,ManagementMode VARCHAR(255)   COMMENT &apos;ManagementMode&apos;,RESOURCE_BUSINESS_NAME VARCHAR(255)   COMMENT &apos;RESOURCE_BUSINESS_NAME&apos;,utmid VARCHAR(255)   COMMENT &apos;utmid&apos;,Notes VARCHAR(500)   COMMENT &apos;Notes&apos;,Created VARCHAR(255)   COMMENT &apos;Created&apos;,TDL_DS_DN VARCHAR(2000) NOT NULL  COMMENT &apos;TDL_DS_DN&apos;,TDL_OPERATION VARCHAR(32)   COMMENT &apos;TDL_OPERATION&apos;,Modified VARCHAR(255)   COMMENT &apos;Modified&apos;,HostedOnId VARCHAR(255)   COMMENT &apos;HostedOnId&apos;,InInterfaceId VARCHAR(255)   COMMENT &apos;InInterfaceId&apos;,reserved4 VARCHAR(255)   COMMENT &apos;reserved4&apos;,Id VARCHAR(255)   COMMENT &apos;Id&apos;,IpSubnetId VARCHAR(255)   COMMENT &apos;IpSubnetId&apos;,managed_object_key VARCHAR(255)   COMMENT &apos;managed_object_key&apos;,PrefixLength VARCHAR(255)   COMMENT &apos;PrefixLength&apos;,reserved2 VARCHAR(255)   COMMENT &apos;reserved2&apos;,reserved3 VARCHAR(255)   COMMENT &apos;reserved3&apos;,TDL_DN VARCHAR(2000) NOT NULL  COMMENT &apos;TDL_DN&apos;,TDL_instance_name VARCHAR(2000) NOT NULL  COMMENT &apos;TDL_instance_name&apos;);</ddlSql>
+    <ModelName/>
+    <ClassName/>
+<myTrucate>N</myTrucate>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>644</xloc>
+      <yloc>234</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Memory table output(Ipsubnet)</name>
+    <type>MemTableOutput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>H2</connection>
+    <schema/>
+    <table>TM_UTM_NNM_MODEL_IPSUBNET</table>
+    <commit>100</commit>
+    <truncate>N</truncate>
+    <ignore_errors>N</ignore_errors>
+    <use_batch>Y</use_batch>
+    <specify_fields>N</specify_fields>
+    <partitioning_enabled>N</partitioning_enabled>
+    <partitioning_field/>
+    <partitioning_daily>N</partitioning_daily>
+    <partitioning_monthly>Y</partitioning_monthly>
+    <tablename_in_field>N</tablename_in_field>
+    <tablename_field/>
+    <tablename_in_table>Y</tablename_in_table>
+    <return_keys>N</return_keys>
+    <return_field/>
+    <fields>
+    </fields>
+    <ddlSql>CREATE TABLE TM_UTM_NNM_MODEL_IPSUBNET COMMENT &apos;UTM_NNM_MODEL.IPSUBNET.E:UTM_NNM_MODEL:NNM_Subnet&apos; (_H2_ID long PRIMARY KEY AUTO_INCREMENT,_Parent_DSDN  TEXT COMMENT &apos;_Parent_DSDN&apos;,Uuid VARCHAR(255)   COMMENT &apos;Uuid&apos;,RESOURCE_BUSINESS_NAME VARCHAR(255)   COMMENT &apos;RESOURCE_BUSINESS_NAME&apos;,Prefix VARCHAR(255)   COMMENT &apos;Prefix&apos;,utmid VARCHAR(255)   COMMENT &apos;utmid&apos;,Name VARCHAR(255)   COMMENT &apos;Name&apos;,Notes VARCHAR(255)   COMMENT &apos;Notes&apos;,Created VARCHAR(255)   COMMENT &apos;Created&apos;,TDL_DS_DN VARCHAR(2000) NOT NULL  COMMENT &apos;TDL_DS_DN&apos;,TDL_OPERATION VARCHAR(32)   COMMENT &apos;TDL_OPERATION&apos;,Modified VARCHAR(255)   COMMENT &apos;Modified&apos;,reserved4 VARCHAR(255)   COMMENT &apos;reserved4&apos;,Id VARCHAR(255)   COMMENT &apos;Id&apos;,managed_object_key VARCHAR(255)   COMMENT &apos;managed_object_key&apos;,PrefixLength VARCHAR(255)   COMMENT &apos;PrefixLength&apos;,reserved2 VARCHAR(255)   COMMENT &apos;reserved2&apos;,reserved3 VARCHAR(255)   COMMENT &apos;reserved3&apos;,TDL_DN VARCHAR(2000) NOT NULL  COMMENT &apos;TDL_DN&apos;,TDL_instance_name VARCHAR(2000) NOT NULL  COMMENT &apos;TDL_instance_name&apos;);</ddlSql>
+    <ModelName/>
+    <ClassName/>
+<myTrucate>N</myTrucate>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>638</xloc>
+      <yloc>333</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>SelecIpsubnet</name>
+    <type>SelectValues</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>      <field>        <name>Uuid</name>
+        <rename>UUID</rename>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>      <field>        <name>PrefixLength</name>
+        <rename>PREFIXLENGTH</rename>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>      <field>        <name>Prefix</name>
+        <rename>PREFIX</rename>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>      <field>        <name>Notes</name>
+        <rename>NOTES</rename>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>      <field>        <name>Created</name>
+        <rename>CREATED</rename>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>      <field>        <name>Modified</name>
+        <rename>MODIFIED</rename>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>      <field>        <name>tdl_ds_dn</name>
+        <rename>TDL_DS_DN</rename>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>      <field>        <name>tdl_dn</name>
+        <rename>TDL_DN</rename>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>      <field>        <name>Id</name>
+        <rename>ID</rename>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>      <field>        <name>Name</name>
+        <rename>NAME</rename>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>      <field>        <name>tdl_instance_name</name>
+        <rename>TDL_INSTANCE_NAME</rename>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>        <select_unspecified>N</select_unspecified>
+    </fields>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>489</xloc>
+      <yloc>332</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>SelectIpAddress</name>
+    <type>SelectValues</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>      <field>        <name>Uuid</name>
+        <rename>UUID</rename>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>      <field>        <name>HostedOnId</name>
+        <rename>HOSTEDONID</rename>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>      <field>        <name>IpSubnetId</name>
+        <rename>IPSUBNETID</rename>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>      <field>        <name>InInterfaceId</name>
+        <rename>ININTERFACEID</rename>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>      <field>        <name>PrefixLength</name>
+        <rename>PREFIXLENGTH</rename>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>      <field>        <name>ManagementMode</name>
+        <rename>MANAGEMENTMODE</rename>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>      <field>        <name>Notes</name>
+        <rename>NOTES</rename>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>      <field>        <name>Created</name>
+        <rename>CREATED</rename>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>      <field>        <name>Modified</name>
+        <rename>MODIFIED</rename>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>      <field>        <name>tdl_ds_dn</name>
+        <rename>TDL_DS_DN</rename>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>      <field>        <name>tdl_dn</name>
+        <rename>TDL_DN</rename>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>      <field>        <name>tdl_instance_name</name>
+        <rename>TDL_INSTANCE_NAME</rename>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>      <field>        <name>Id</name>
+        <rename>ID</rename>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>        <select_unspecified>N</select_unspecified>
+    </fields>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>502</xloc>
+      <yloc>238</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step_error_handling>
+  </step_error_handling>
+   <slave-step-copy-partition-distribution>
+</slave-step-copy-partition-distribution>
+   <slave_transformation>N</slave_transformation>
+</transformation>
