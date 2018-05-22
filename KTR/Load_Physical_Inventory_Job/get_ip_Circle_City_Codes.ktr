@@ -113,7 +113,7 @@
     </attributes>
   </connection>
   <order>
-  <hop> <from>Set Var</from><to>Select values 2 2</to><enabled>Y</enabled> </hop>  <hop> <from>Select values 2 2</from><to>update&#47;insert</to><enabled>Y</enabled> </hop>  <hop> <from>Read SM</from><to>Select values</to><enabled>Y</enabled> </hop>  <hop> <from>Select values 2 2</from><to>UTM_out</to><enabled>Y</enabled> </hop>  <hop> <from>Select values</from><to>CircleCOde-name</to><enabled>Y</enabled> </hop>  <hop> <from>CircleCOde-name</from><to>Select values 2</to><enabled>Y</enabled> </hop>  <hop> <from>Select values 2</from><to>Set Var</to><enabled>Y</enabled> </hop>  </order>
+  <hop> <from>Set Var</from><to>Select values 2 2</to><enabled>Y</enabled> </hop>  <hop> <from>Select values 2 2</from><to>update&#47;insert</to><enabled>Y</enabled> </hop>  <hop> <from>Read SM Location Table</from><to>Select values</to><enabled>Y</enabled> </hop>  <hop> <from>Select values 2 2</from><to>UTM_out</to><enabled>Y</enabled> </hop>  <hop> <from>Select values</from><to>CircleCOde-name</to><enabled>Y</enabled> </hop>  <hop> <from>CircleCOde-name</from><to>Select values 2</to><enabled>Y</enabled> </hop>  <hop> <from>Select values 2</from><to>Set Var</to><enabled>Y</enabled> </hop>  </order>
   <step>
     <name>CircleCOde-name</name>
     <type>ValueMapper</type>
@@ -226,7 +226,7 @@
     </step>
 
   <step>
-    <name>Read SM</name>
+    <name>Read SM Location Table</name>
     <type>TableInput</type>
     <description/>
     <distribute>Y</distribute>

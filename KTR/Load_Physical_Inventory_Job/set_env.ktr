@@ -90,9 +90,9 @@
     </attributes>
   </connection>
   <order>
-  <hop> <from>Generate random value</from><to>Temp NNM Node</to><enabled>Y</enabled> </hop>  <hop> <from>Generate random value</from><to>Temp Port Report</to><enabled>Y</enabled> </hop>  <hop> <from>Generate random value</from><to>Temp Circuit Report</to><enabled>Y</enabled> </hop>  <hop> <from>Generate random value</from><to>Temp NNM Interface</to><enabled>Y</enabled> </hop>  </order>
+  <hop> <from>Setup H2 Tables</from><to>Temp NNM Node</to><enabled>Y</enabled> </hop>  <hop> <from>Setup H2 Tables</from><to>Temp Port Report</to><enabled>Y</enabled> </hop>  <hop> <from>Setup H2 Tables</from><to>Temp Circuit Report</to><enabled>Y</enabled> </hop>  <hop> <from>Setup H2 Tables</from><to>Temp NNM Interface</to><enabled>Y</enabled> </hop>  </order>
   <step>
-    <name>Generate random value</name>
+    <name>Setup H2 Tables</name>
     <type>RandomValue</type>
     <description/>
     <distribute>N</distribute>
